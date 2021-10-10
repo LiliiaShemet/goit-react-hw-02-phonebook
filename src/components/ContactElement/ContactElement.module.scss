@@ -1,0 +1,26 @@
+.text {
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.span {
+    color: rgba(0, 0, 0, 0.6);
+    font-style: italic;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.btn {
+    width: 80px;
+    height: 30px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    color: rgb(112, 112, 112);
+    outline: none;
+
+    &:hover {
+        color: rgb(209, 93, 27);
+        transform: scale(1.1);
+    }
+}

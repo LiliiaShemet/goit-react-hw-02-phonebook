@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import s from "./ContactList.module.scss";
+import ContactElement from "../ContactElement"
 
 const Contacts = ({ onDeleteContact, list }) => {
   console.log(list);
@@ -8,17 +9,7 @@ const Contacts = ({ onDeleteContact, list }) => {
     <ul className={s.filterList}>
       {list.map(({ id, number, name }) => (
         <li className={s.filterListItem} key={id}>
-          <p className={s.text}>
-            {name}: <span className={s.span}>{number}</span>
-          </p>
-
-          <button
-            className={s.btn}
-            onClick={() => onDeleteContact(id)}
-            type="button"
-          >
-            delete
-          </button>
+          <ContactElement name={name} number={number} onDeleteContact={() => onDeleteContact(id)}  />
         </li>
       ))}
     </ul>
